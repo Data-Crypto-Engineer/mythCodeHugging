@@ -1,0 +1,35 @@
+# Streamlit theme mirroring the "storybook" palette used in ui/theme.py.
+[theme]
+base = "light"
+primaryColor = "#7C6BA8"          # misty lavender
+backgroundColor = "#FBF7EF"       # warm cream
+secondaryBackgroundColor = "#F1EBF7"
+textColor = "#2F2A3A"
+font = "serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = true# Streamlit theme mirroring the "storybook" palette used in ui/theme.py.
+[theme]
+base = "light"
+primaryColor = "#7C6BA8"          # misty lavender
+backgroundColor = "#FBF7EF"       # warm cream
+secondaryBackgroundColor = "#F1EBF7"
+textColor = "#2F2A3A"
+font = "serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = true
