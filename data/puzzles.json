@@ -1,0 +1,117 @@
+{
+  "sequence": {
+    "title": "Guide the Clockwork Guardian",
+    "concept": "sequence",
+    "python_concept": "Sequential execution",
+    "instructions": "Give the guardian its commands in order. It performs exactly what you write, one line at a time.",
+    "reveal": {
+      "concept": "sequence",
+      "title": "Order of Instructions",
+      "explanation": "A program is a list of instructions carried out from top to bottom. The guardian does not guess your intent — it only obeys the order. Change the order and you change the world.",
+      "python_example": "move_forward()\nmove_forward()\nturn_right()\nmove_forward()",
+      "world_analogy": "A guardian walks the room exactly as a program walks down its lines."
+    },
+    "variants": [
+      {
+        "difficulty": 1,
+        "max_ops": 6,
+        "grid": {"w": 4, "h": 3, "walls": [[1, 1]], "start": {"x": 0, "y": 1, "dir": "E"}, "goal": [3, 1]},
+        "hint": "The wall blocks the middle road. Walk the top lane, then come down."
+      },
+      {
+        "difficulty": 2,
+        "max_ops": 8,
+        "grid": {"w": 5, "h": 4, "walls": [[2, 0], [2, 1], [1, 3]], "start": {"x": 0, "y": 0, "dir": "E"}, "goal": [4, 3]},
+        "hint": "Two turns are needed. Reach the right wall before you descend."
+      }
+    ]
+  },
+  "conditions": {
+    "title": "The Carved Door",
+    "concept": "conditions",
+    "python_concept": "Conditional logic",
+    "instructions": "Write ONE rule the door-keeper can follow. It must behave correctly in every situation it is shown.",
+    "reveal": {
+      "concept": "conditions",
+      "title": "Deciding With Conditions",
+      "explanation": "A condition lets a program choose between two roads. The rule is written once, but it works for every situation — that is its power.",
+      "python_example": "if has_key:\n    open_door()\nelse:\n    search_for_key()",
+      "world_analogy": "The door opens when the key is present, and searches when it is not."
+    },
+    "facts": ["has_key", "door_locked", "has_lantern", "spirit_trust_high"],
+    "actions": ["open_door", "search_for_key", "light_lantern", "knock", "wait"],
+    "variants": [
+      {
+        "difficulty": 1,
+        "scenarios": [
+          {"facts": {"has_key": true,  "door_locked": true},  "expect": "open_door"},
+          {"facts": {"has_key": false, "door_locked": true},  "expect": "search_for_key"}
+        ],
+        "hint": "Ask the door-keeper: does the traveller carry the key? Everything else follows."
+      },
+      {
+        "difficulty": 2,
+        "scenarios": [
+          {"facts": {"has_key": true,  "door_locked": true, "has_lantern": false}, "expect": "open_door"},
+          {"facts": {"has_key": false, "door_locked": true, "has_lantern": true},  "expect": "light_lantern"},
+          {"facts": {"has_key": false, "door_locked": true, "has_lantern": false}, "expect": "search_for_key"}
+        ],
+        "hint": "Two questions are needed, in order: first the key, and only then the lantern."
+      }
+    ]
+  },
+  "loops": {
+    "title": "The Hollow River",
+    "concept": "loops",
+    "python_concept": "Loops and repetition",
+    "instructions": "The tiles repeat. Compose as few blocks as possible — no more than the limit shown.",
+    "reveal": {
+      "concept": "loops",
+      "title": "Repeating Without Repeating Yourself",
+      "explanation": "A loop repeats work so you do not have to write it twice. Five identical tiles need one instruction and one number, not five lines.",
+      "python_example": "for step in range(5):\n    move_forward()",
+      "world_analogy": "The guardian crosses five identical tiles with one repeating command."
+    },
+    "variants": [
+      {
+        "difficulty": 1,
+        "steps": 5,
+        "max_blocks": 1,
+        "hint": "Five tiles. One block. The number is the trick."
+      },
+      {
+        "difficulty": 2,
+        "steps": 7,
+        "max_blocks": 2,
+        "hint": "Cross the tiles in one repeat, then turn once at the end."
+      }
+    ]
+  },
+  "code_assembly": {
+    "title": "The First Spell",
+    "concept": "code_assembly",
+    "python_concept": "Variables and reading real Python",
+    "instructions": "Assemble the scroll. Choose the lines in the correct order to rebuild the spell.",
+    "reveal": {
+      "concept": "code_assembly",
+      "title": "Naming Things: Variables",
+      "explanation": "A variable is a name that holds a value. Once named, you can use it again and again — change the value, and the whole spell changes.",
+      "python_example": "tiles = 5\nfor step in range(tiles):\n    move_forward()",
+      "world_analogy": "Elarion keeps the tile count in a named chest instead of carving the number everywhere."
+    },
+    "variants": [
+      {
+        "difficulty": 1,
+        "pool": [
+          {"id": "l1", "code": "tiles = 5"},
+          {"id": "l2", "code": "for step in range(tiles):"},
+          {"id": "l3", "code": "    move_forward()"},
+          {"id": "l4", "code": "    open_door()"},
+          {"id": "l5", "code": "search_for_key()"}
+        ],
+        "solution": ["l1", "l2", "l3"],
+        "hint": "First name the number, then repeat it — and end with the indented action."
+      }
+    ]
+  }
+}
