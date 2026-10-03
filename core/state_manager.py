@@ -133,3 +133,10 @@ def summary_of(state: GameState) -> str:
         f"Long-term memory: {' | '.join(state.long_term_memories[-3:]) or 'none yet'}\n"
         f"Recent: {' | '.join(state.recent_history[-4:]) or 'the story has just begun'}"
     )
+def validate_and_report(state: GameState) -> list[str]:
+    """Run deterministic validation and record any repairs in the ledger."""
+    from core.state_validator import validate_state
+    problems = validate_state(state)
+    for problem in problems:
+        add_ledger(state, f"repair: {problem}")
+    return problems
