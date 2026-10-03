@@ -1,0 +1,18 @@
+{
+  "kingdom": "Elarion",
+  "current_location": "Whispering Village",
+  "water_supply": "damaged",
+  "forest_spirit_trust": 0,
+  "clockwork_guardian": "inactive",
+  "village_morale": 60,
+  "energy_reserve": 50,
+  "discovered_locations": ["Whispering Village"],
+  "completed_quests": [],
+  "important_choices": [],
+  "unresolved_conflicts": ["The waterwheel of Whispering Village has fallen silent."],
+  "npc_states": {
+    "mira": "worried",
+    "nettle": "watchful",
+    "sable": "curious"
+  }
+}
