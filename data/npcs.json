@@ -1,0 +1,42 @@
+{
+  "mira": {
+    "name": "Mira",
+    "role": "Village Inventor",
+    "disposition": 5,
+    "traits": ["practical", "warm", "distractible"],
+    "voice": "Talks in short, excited bursts. Saws and hammers in her sentences.",
+    "greeting": "Mind the gears on the floor — they bite."
+  },
+  "nettle": {
+    "name": "Nettle",
+    "role": "Forest Spirit of the Whistling Pines",
+    "disposition": 0,
+    "traits": ["ancient", "wounded", "bargain-loving"],
+    "voice": "Speaks slowly, in riddles built from weather and seeds.",
+    "greeting": "You walk loudly for something so small."
+  },
+  "sable": {
+    "name": "Sable",
+    "role": "Keeper of the Unwritten Archive",
+    "disposition": 3,
+    "traits": ["precise", "curious", "easily delighted"],
+    "voice": "Explains things in ordered lists, as if reading from a shelf.",
+    "greeting": "Every spell you have ever cast was once a sentence someone refused to forget."
+  },
+  "brack": {
+    "name": "Brack",
+    "role": "Well-Warden of Whispering Village",
+    "disposition": 2,
+    "traits": ["gruff", "protective", "tired"],
+    "voice": "Low and rumbling. Prefers buckets to conversation.",
+    "greeting": "Water's gone. Talk fast, I'm carrying."
+  },
+  "elowen": {
+    "name": "Elowen",
+    "role": "Child of Whispering Village",
+    "disposition": 6,
+    "traits": ["bold", "nosy", "kind"],
+    "voice": "Asks three questions before you finish one answer.",
+    "greeting": "Are you the one who's going to fix it? Everyone says someone will."
+  }
+}
