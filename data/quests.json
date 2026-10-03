@@ -1,0 +1,71 @@
+{
+  "quests": [
+    {
+      "id": "silent_water",
+      "title": "The Silent Water",
+      "objective": "Discover why the water of Whispering Village has stopped flowing.",
+      "location": "Whispering Village",
+      "concept_hint": "sequence",
+      "openers": [
+        {"id": "waterwheel",  "label": "Inspect the broken waterwheel with Mira", "kind": "explore"},
+        {"id": "spirit",      "label": "Walk to the treeline and speak with the forest spirit Nettle", "kind": "talk"},
+        {"id": "mechanical",  "label": "Follow the clicking sounds to the riverbank", "kind": "explore"},
+        {"id": "underground", "label": "Search the old maps for a hidden water source", "kind": "explore"}
+      ],
+      "next": {
+        "waterwheel": "gear_of_echoes",
+        "spirit": "the_green_bargain",
+        "mechanical": "wake_the_guardian",
+        "underground": "hollow_river"
+      }
+    },
+    {
+      "id": "gear_of_echoes",
+      "title": "The Gear of Echoes",
+      "objective": "Help Mira reconstruct the rhythm the waterwheel must turn to.",
+      "location": "Mira's Workshop",
+      "concept_hint": "sequence",
+      "next": {"default": "wake_the_guardian"}
+    },
+    {
+      "id": "the_green_bargain",
+      "title": "The Green Bargain",
+      "objective": "Learn what the forest spirit wants before the river can run again.",
+      "location": "Whispering Treeline",
+      "concept_hint": "conditions",
+      "next": {"default": "hollow_river"}
+    },
+    {
+      "id": "wake_the_guardian",
+      "title": "Wake the Clockwork Guardian",
+      "objective": "Give the dormant guardian a true sequence of commands so it can walk again.",
+      "location": "Riverbank Ruins",
+      "concept_hint": "sequence",
+      "next": {"default": "the_carved_door"}
+    },
+    {
+      "id": "the_carved_door",
+      "title": "The Carved Door",
+      "objective": "Teach the door-keeper the rule that decides when a door may open.",
+      "location": "Hollow Stair",
+      "concept_hint": "conditions",
+      "next": {"default": "hollow_river"}
+    },
+    {
+      "id": "hollow_river",
+      "title": "The Hollow River",
+      "objective": "Cross the repeating stone tiles of the underground river.",
+      "location": "Sunken Cistern",
+      "concept_hint": "loops",
+      "next": {"default": "the_first_spell"}
+    },
+    {
+      "id": "the_first_spell",
+      "title": "The First Spell",
+      "objective": "Compose Elarion's first written spell — and read it as your own code.",
+      "location": "The Unwritten Archive",
+      "concept_hint": "code_assembly",
+      "next": {}
+    }
+  ]
+}
